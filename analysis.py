@@ -11,9 +11,12 @@ This program will:
 """
 
 # Import necessary libraries
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd # For data manipulation
+import matplotlib.pyplot as plt # For plotting
+import seaborn as sns # For advanced plotting
+import json # For JSON handling
+import subprocess # For running shell commands
+
 
 # Load the dataset
 iris = pd.read_csv('iris.csv') # Load the dataset from CSV file
@@ -64,6 +67,51 @@ for i, col1 in enumerate(numeric_columns): # Loop through each numeric column
         
 print('For additional analysis please refer to the Jupyter notebook analysis.ipynb') # Print message for additional analysis
 
+
+
+""" The following code has been developed using ChatGPT (GPT-4o) from OpenAI.
+----------------------------------------------------------------------------------------------------------------------------"""
+
+# The below code is used to extract the contents of the Jupyter notebook analysis.ipynb
+
+# Load the notebook JSON
+with open('analysis.ipynb', 'r', encoding='utf-8') as f: # Open the notebook file in read mode
+    notebook = json.load(f) # Load the JSON content
+
+# Go through each cell and print its type + content
+for i, cell in enumerate(notebook.get('cells', []), 1): # Enumerate through each cell in the notebook
+    cell_type = cell.get('cell_type') # Get the type of the cell
+    source = ''.join(cell.get('source', []))  # source is a list of lines
+
+    print(f"\n=== Cell {i} ({cell_type.upper()}) ===\n") # Print cell number and type
+    print(source) # Print the content of the cell
+    
+    # If the cell is a code cell, print the outputs
+    if cell_type == 'code': # Check if the cell is a code cell
+        outputs = cell.get('outputs', []) # Get the outputs of the cell
+        for j, output in enumerate(outputs, 1): # Enumerate through each output
+            print(f"\n--- Output {j} ---") # Print output number
+            if 'text' in output: # Check if 'text' is in the output
+                print(''.join(output['text'])) # Print the text output
+            elif 'data' in output: # Check if 'data' is in the output
+                if 'text/plain' in output['data']: # Check if 'text/plain' is in the data
+                    print(''.join(output['data']['text/plain'])) # Print the text data
+                elif 'image/png' in output['data']: # Check if 'image/png' is in the data
+                    print("[Image output: PNG]") # Print image output type
+                elif 'text/html' in output['data']: # Check if 'text/html' is in the data
+                    print("[HTML output]") # Print HTML output type
+                else: # If the data type is not recognized
+                    print("[Other data type]") # Print other data type
+            else: # If the output type is not recognized
+                print("[Unknown output type]") # Print unknown output type
+
+    print("\n" + "="*50) # Print separator line
+
+print("\nFinished extracting notebook contents.") # Print completion message
+
+
+
+# End
 
 
 
