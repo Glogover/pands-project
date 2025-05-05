@@ -23,11 +23,27 @@ print(iris.head())
 
 # 1. Output a summary of each variable to a single text file
 
-summary = iris.describe(include = 'all') # Include all columns
+summary = iris.drop(columns=['class']).describe() # Drop the 'class' column and get summary statistics
 with open('iris_summary.txt', 'w') as f: # Open file in write mode
     f.write(str(summary)) # Write summary to file
 print("Summary statistics saved to iris_summary.txt") # Print confirmation message
 
-    
+# 2. Save a histogram of each variable to png files
+
+for column in iris.columns: # Loop through each column
+    if column == 'class':
+        continue # Skip the 'class' column
+    plt.figure(figsize = (8, 6)) # Create a new figure with specified size
+    sns.histplot(iris[column], kde=True) # Plot histogram with kernel density estimate
+    plt.title(f'Histogram of {column}') # Set title
+    plt.xlabel(column) # Set x axis label
+    plt.ylabel('Frequency') # Set y axis label
+    plt.grid(True) # Show grid
+    plt.tight_layout() # Adjust layout to avoid label cutoff
+    plt.savefig(f'{column}_histogram.png') # Save figure to file
+    plt.close() # Close the figure
+    print(f"Saved histogram: {column}_histogram.png") # Print confirmation message
+
+
 
 
