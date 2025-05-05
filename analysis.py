@@ -60,4 +60,10 @@ for i, col1 in enumerate(numeric_columns): # Loop through each numeric column
         plt.close() # Close the figure
         print(f"Saved scatter plot: {col1}_{col2}_scatter_plot.png") # Print confirmation message
 
+# 4. Perform any other analysis appropriate
+        
+print('For additional analysis please refer to the Jupyter notebook analysis.ipynb') # Print message for additional analysis
+
+
+
 
