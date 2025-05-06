@@ -10,6 +10,18 @@ This program will:
 4. Perform any other analysis appropriate.
 """
 
+"""
+The Visual Studio Code terminal has a limited scrollback buffer, 
+meaning that if a large amount of data is output, older lines will be discarded 
+and will no longer be visible.
+To increase this limit:
+   Navigate to File → Preferences → Settings (or press Ctrl + ,).
+   Search for terminal.integrated.scrollback.
+By default, this is set to approximately 1000 lines — you can increase it 
+to 10,000 or even higher if you need to view extended logs.
+"""
+
+
 # Import necessary libraries
 import pandas as pd # For data manipulation
 import matplotlib.pyplot as plt # For plotting
@@ -21,8 +33,8 @@ import subprocess # For running shell commands
 # Load the dataset
 iris = pd.read_csv('iris.csv') # Load the dataset from CSV file
 
-# Display the first 5 rows of the dataset
-print(iris.head()) 
+# Display random sample of the dataset
+print(iris.sample(10))
 
 # 1. Output a summary of each variable to a single text file
 
@@ -65,7 +77,7 @@ for i, col1 in enumerate(numeric_columns): # Loop through each numeric column
 
 # 4. Perform any other analysis appropriate
         
-print('For additional analysis please refer to the Jupyter notebook analysis.ipynb') # Print message for additional analysis
+print('For further analysis, please refer to the Jupyter notebook analysis.ipynb, which also is displayed below in the terminal.') # Print message for additional analysis
 
 
 
