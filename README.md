@@ -1,23 +1,110 @@
-# pands-project
+# Iris Dataset Analysis
 
-Dataset Information
---------------------
+Author: **Marcin Kaminski**
 
-What do the instances in this dataset represent?
+## 📊 Project Overview
 
-Each instance is a plant
+This project performs an exploratory data analysis (EDA) on the classic Iris dataset — one of the earliest and most widely used datasets in statistics and machine learning. It includes:
+
+- Summary statistics.
+- Visualizations (histograms, scatter plots).
+- Detailed analysis by iris class.
+
+---
+
+## 📁 Dataset Information
+
+- **Description:**  
+  The dataset contains 150 samples of iris plants, divided into 3 classes (50 samples each):
+  - Iris Setosa
+  - Iris Versicolor
+  - Iris Virginica
+
+- **Attributes:**  
+  Four numerical features per sample:
+  - Sepal length
+  - Sepal width
+  - Petal length
+  - Petal width
+
+- **Predicted Attribute:**  
+  Iris plant class.
+
+- **Important Note:**  
+  This dataset differs slightly from Fisher's original paper:
+  - Sample 35: fourth feature should be `0.2` (Iris-setosa).
+  - Sample 38: second and third features should be `3.6` and `1.4` respectively (Iris-setosa).
+
+- **Source:**  
+  [UCI Machine Learning Repository — Iris Dataset](https://archive.ics.uci.edu/dataset/53/iris)
+
+---
+
+## ⚙️ Scripts
+
+### `analysis.py`
+
+- Outputs a summary of each variable to a text file.
+- Saves a histogram of each variable as PNG files.
+- Creates scatter plots of each pair of variables.
+- Performs additional appropriate analysis.
+
+### `analysis.ipynb`
+
+- General overview.
+- Detailed analysis for:
+  - Iris Setosa
+  - Iris Versicolor
+  - Iris Virginica
+- Summary of findings.
+
+---
+
+## 📦 Requirements
+
+Install the following Python libraries:
+
+```bash
+pip install pandas matplotlib seaborn
 
 
-Additional Information
+## 📦 Used Libraries
 
-This is one of the earliest datasets used in the literature on classification methods and widely used in statistics and machine learning.  The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.  One class is linearly separable from the other 2; the latter are not linearly separable from each other.
+- pandas  
+- matplotlib.pyplot  
+- seaborn  
+- json  
+- subprocess  
 
-Predicted attribute: class of iris plant.
+---
 
-This is an exceedingly simple domain.
+## 🔗 References
 
-This data differs from the data presented in Fishers article (identified by Steve Chadwick,  spchadwick@espeedaz.net ).  The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.  
+- Pandas read_csv  
+- Pandas sample  
+- Pandas describe  
+- Python with statement  
+- Matplotlib figure  
+- Seaborn histplot  
+- Matplotlib title  
+- Matplotlib xlabel  
+- Matplotlib ylabel  
+- Matplotlib grid  
+- Matplotlib tight_layout  
+- Matplotlib savefig  
+- Matplotlib close  
+- Pandas select_dtypes  
+- Python enumerate  
+- Seaborn scatterplot  
+
+---
+
+## 📬 Contact
+
+Marcin Kaminski → [marcin442228@gmail.com](mailto:marcin442228@gmail.com)
+
+---
 
 
-Ref: https://archive.ics.uci.edu/dataset/53/iris
+
 
