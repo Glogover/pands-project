@@ -72,22 +72,22 @@ This project performs an exploratory data analysis (EDA) on the classic Iris dat
 
 ## 🔗 References
 
-- Pandas read_csv  
-- Pandas sample  
-- Pandas describe  
-- Python with statement  
-- Matplotlib figure  
-- Seaborn histplot  
-- Matplotlib title  
-- Matplotlib xlabel  
-- Matplotlib ylabel  
-- Matplotlib grid  
-- Matplotlib tight_layout  
-- Matplotlib savefig  
-- Matplotlib close  
-- Pandas select_dtypes  
-- Python enumerate  
-- Seaborn scatterplot  
+1. [Pandas read_csv](https://datascienceparichay.com/article/read-csv-files-using-pandas-with-examples/)  
+2. [Pandas sample](https://www.w3schools.com/python/pandas/ref_df_sample.asp)  
+3. [Pandas describe](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html)  
+4. [Python with statement](https://www.geeksforgeeks.org/how-to-open-a-file-using-the-with-statement/)  
+5. [Matplotlib figure](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html)  
+6. [Seaborn histplot](https://seaborn.pydata.org/generated/seaborn.histplot.html)  
+7. [Matplotlib title](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html)  
+8. [Matplotlib xlabel](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html)  
+9. [Matplotlib ylabel](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html)  
+10. [Matplotlib grid](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html)  
+11. [Matplotlib tight_layout](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html)  
+12. [Matplotlib savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html)  
+13. [Matplotlib close](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.close.html)  
+14. [Pandas select_dtypes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html)  
+15. [Python enumerate](https://docs.python.org/3.12/library/functions.html#enumerate)  
+16. [Seaborn scatterplot](https://seaborn.pydata.org/generated/seaborn.scatterplot.html)  
 
 ---
 
