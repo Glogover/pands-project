@@ -60,14 +60,6 @@ This project performs an exploratory data analysis (EDA) on the classic Iris dat
 
 ---
 
-## 📦 Requirements
-
-Install the following Python libraries:
-
-```bash
-pip install pandas matplotlib seaborn
-
-
 ## 📦 Used Libraries
 
 - pandas  
